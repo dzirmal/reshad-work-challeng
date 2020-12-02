@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { Navbar, Planets } from './components'
+import { Films, Navbar, People, Planets } from './components'
 
 import GlobalStyle from './globalStyle'
 import { Home } from './pages'
@@ -11,6 +11,8 @@ function App() {
       <Navbar />
       <Switch>
         <Route path='/planets' component={Planets} />
+        <Route path='/films' component={Films} />
+        <Route path='/people' component={People} />
         <Route exact path='/' component={Home} />
       </Switch>
     </Router>

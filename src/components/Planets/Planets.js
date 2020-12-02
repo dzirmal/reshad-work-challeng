@@ -3,13 +3,13 @@ import axios from '../../axios'
 
 import requests from '../../requests'
 
-import { PlanetsContainer, PlanetsAll, PlanetsTitle } from './Planets.elements'
-import { PlanetCard } from '..'
+import { PlanetsContainer, PlanetsAll, Category } from './Planets.elements'
+import { Card } from '..'
 import { useStateValue } from '../../stateProvider/StateProvider'
 
 // const { GraphQLServer } = require('graphql-yoga')
 
-function Planets({ title }) {
+function Planets() {
   // const [{ movies, dispatch }] = useStateValue()
   const [planets, setPlanets] = useState([])
   const [loading, setLoading] = useState(true)
@@ -28,10 +28,10 @@ function Planets({ title }) {
 
   return (
     <PlanetsContainer>
-      <PlanetsTitle>{title}</PlanetsTitle>
+      <Category>Planets</Category>
       <PlanetsAll>
         {planets.map((planet, i) => (
-          <PlanetCard key={i} planet={planet} />
+          <Card key={i} planet={planet} />
         ))}
       </PlanetsAll>
     </PlanetsContainer>

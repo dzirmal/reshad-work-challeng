@@ -1,3 +1,5 @@
 export { default as Planets } from './Planets/Planets'
-export { default as PlanetCard } from './PlanetCard/PlanetCard'
+export { default as Films } from './Films/Films'
+export { default as People } from './People/People'
+export { default as Card } from './Card/Card'
 export { default as Navbar } from './Navbar/Navbar'

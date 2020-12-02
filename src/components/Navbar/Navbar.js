@@ -1,16 +1,23 @@
 import React from 'react'
 import { Button, Links } from '../../globalStyle'
+import { NavbarContainer } from './Navbar.elements'
 
 function Navbar() {
   return (
-    <div>
+    <NavbarContainer>
       <Links to='/'>
         <Button>Home</Button>
       </Links>
       <Links to='/planets'>
         <Button>Planets</Button>
       </Links>
-    </div>
+      <Links to='/films'>
+        <Button>Films</Button>
+      </Links>
+      <Links to='/people'>
+        <Button>People</Button>
+      </Links>
+    </NavbarContainer>
   )
 }
 

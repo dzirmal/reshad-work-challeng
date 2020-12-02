@@ -18,7 +18,7 @@ export const Button = styled.button`
   background: ${({ primary }) => (primary ? '#364f6b' : '#00adb5')};
   white-space: nowrap;
   padding: ${({ big }) => (big ? '12px 64px' : '10px 20px')};
-  color: ${({ primary }) => (primary ? '#0BD5EA' : '#364f6b')};
+  color: ${({ primary }) => (primary ? '#0BD5EA' : '##fff')};
   font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
   outline: none;
   border: none;

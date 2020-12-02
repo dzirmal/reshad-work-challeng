@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const PlanetsContainer = styled.div`
+export const PeopleContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,11 +14,11 @@ export const Category = styled.h1`
   justify-content: center;
 `
 
-export const PlanetsWrapper = styled.div`
+export const PeopleWrapper = styled.div`
   display: flex;
 `
 
-export const PlanetsAll = styled.div`
+export const PeopleAll = styled.div`
   width: 100%;
   max-width: 1400px;
   display: flex;
