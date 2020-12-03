@@ -29,6 +29,22 @@ export const Button = styled.button`
     color: ${({ primary }) => (primary ? '#364f6b' : '#0BD5EA')};
     background: ${({ primary }) => (primary ? '#00adb5' : '#364f6b')};
   }
+
+  @media screen and (max-width: 540px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: ${({ big }) => (big ? '30%' : '10px 20px')};
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  @media screen and (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 `
 
 export const Links = styled(Link)`

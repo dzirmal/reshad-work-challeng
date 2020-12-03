@@ -1,11 +1,11 @@
-import React from 'react'
-import { CardDescription } from '../Card/Card.elements'
+import React, { useEffect, useState } from 'react'
 import {
   PersonCardContainer,
   PersonCardElement,
   PersonCardElementName,
   PersonCardElementNameValue,
   PersonCardHeader,
+  PersonCardDescription,
 } from './PersonCard.elements'
 
 function PersonCard({
@@ -31,7 +31,7 @@ function PersonCard({
   return (
     <PersonCardContainer>
       <PersonCardHeader>{name}</PersonCardHeader>
-      <CardDescription>
+      <PersonCardDescription>
         <PersonCardElement>
           <PersonCardElementName>Birth Year:</PersonCardElementName>
           <PersonCardElementNameValue>{birth_year}</PersonCardElementNameValue>
@@ -114,7 +114,7 @@ function PersonCard({
             {vehicles.length}
           </PersonCardElementNameValue>
         </PersonCardElement>
-      </CardDescription>
+      </PersonCardDescription>
     </PersonCardContainer>
   )
 }

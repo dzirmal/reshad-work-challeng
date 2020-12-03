@@ -4,7 +4,7 @@ import axios from '../../axios'
 import requests from '../../requests'
 
 import { PlanetsContainer, PlanetsAll, Category } from './Planets.elements'
-import { Card } from '..'
+import { PlanetCard } from '..'
 import { useStateValue } from '../../stateProvider/StateProvider'
 
 // const { GraphQLServer } = require('graphql-yoga')
@@ -31,7 +31,7 @@ function Planets() {
       <Category>Planets</Category>
       <PlanetsAll>
         {planets.map((planet, i) => (
-          <Card key={i} planet={planet} />
+          <PlanetCard key={i} planet={planet} />
         ))}
       </PlanetsAll>
     </PlanetsContainer>

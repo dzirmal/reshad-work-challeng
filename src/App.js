@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { Films, Navbar, People, Planets } from './components'
+import { Films, Navbar, People, Planets, ScrollToTop } from './components'
 
 import GlobalStyle from './globalStyle'
 import { Home } from './pages'
@@ -8,6 +8,7 @@ function App() {
   return (
     <Router>
       <GlobalStyle />
+      <ScrollToTop />
       <Navbar />
       <Switch>
         <Route path='/planets' component={Planets} />

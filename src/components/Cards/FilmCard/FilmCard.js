@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardDescription } from '../Card/Card.elements'
+import { CardDescription } from '../PlanetCard/PlanetCard.elements'
 import {
   FilmCardContainer,
   FilmCardElement,

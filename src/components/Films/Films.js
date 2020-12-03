@@ -3,9 +3,8 @@ import React, { useEffect, useState } from 'react'
 import axios from '../../axios'
 
 import requests from '../../requests'
-import { Card } from '..'
+import { FilmCard } from '..'
 import { Category, FilmsAll, FilmsContainer } from './Films.elements'
-import FilmCard from './FilmCard'
 
 function Films() {
   // const [{ movies, dispatch }] = useStateValue()
@@ -28,8 +27,8 @@ function Films() {
     <FilmsContainer>
       <Category>Films</Category>
       <FilmsAll>
-        {films.map((film, i) => (
-          <FilmCard key={i} film={film} />
+        {films.map((film) => (
+          <FilmCard key={film.episode_id} film={film} />
         ))}
       </FilmsAll>
     </FilmsContainer>

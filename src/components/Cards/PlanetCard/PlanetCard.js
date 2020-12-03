@@ -6,7 +6,7 @@ import {
   CardElementName,
   CardElement,
   CardElementNameValue,
-} from './Card.elements'
+} from './PlanetCard.elements'
 
 function Card({
   planet: {

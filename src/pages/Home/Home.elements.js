@@ -18,4 +18,11 @@ export const HomeTitle = styled.h1`
 export const HomeContents = styled.div`
   display: flex;
   justify-content: space-around;
+
+  @media (max-width: 540px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
 `
