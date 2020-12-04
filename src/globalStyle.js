@@ -6,7 +6,8 @@ const GlobalStyle = createGlobalStyle`
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;font-family: 'Source Sans Pro', sans-serif
+  padding: 0;
+  font-family: 'Arial', sans-serif
 }
 `
 
@@ -17,6 +18,7 @@ export const Button = styled.button`
   align-items: center;
   background: ${({ primary }) => (primary ? '#364f6b' : '#00adb5')};
   white-space: nowrap;
+  width: ${({ big }) => (big ? '80px' : '60px')};
   padding: ${({ big }) => (big ? '12px 64px' : '10px 20px')};
   color: ${({ primary }) => (primary ? '#0BD5EA' : '##fff')};
   font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
@@ -35,7 +37,6 @@ export const Button = styled.button`
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    width: ${({ big }) => (big ? '30%' : '10px 20px')};
     margin-top: 5px;
     margin-bottom: 5px;
   }

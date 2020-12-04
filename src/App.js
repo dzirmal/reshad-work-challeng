@@ -6,17 +6,19 @@ import { Home } from './pages'
 
 function App() {
   return (
-    <Router>
-      <GlobalStyle />
-      <ScrollToTop />
-      <Navbar />
-      <Switch>
-        <Route path='/planets' component={Planets} />
-        <Route path='/films' component={Films} />
-        <Route path='/people' component={People} />
-        <Route exact path='/' component={Home} />
-      </Switch>
-    </Router>
+    <>
+      <Router>
+        <GlobalStyle />
+        <ScrollToTop />
+        <Navbar />
+        <Switch>
+          <Route path='/planets' component={Planets} />
+          <Route path='/films' component={Films} />
+          <Route path='/people' component={People} />
+          <Route exact path='/' component={Home} />
+        </Switch>
+      </Router>
+    </>
   )
 }
 

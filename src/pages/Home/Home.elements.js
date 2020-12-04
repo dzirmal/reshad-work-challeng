@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const HomeContainer = styled.div`
+  background-color: rgb(234, 237, 237);
   width: 100%;
   max-width: 1400px;
   display: flex;
@@ -17,7 +18,8 @@ export const HomeTitle = styled.h1`
 
 export const HomeContents = styled.div`
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  flex-direction: column;
 
   @media (max-width: 540px) {
     display: flex;
