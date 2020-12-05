@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import axios from '../../axios'
+import axios from '../../helpers/axios/axios'
 
-import requests from '../../requests'
+import requests from '../../helpers/requests'
 import { PersonCard } from '..'
 import { Category, PeopleAll, PeopleContainer } from './People.elements'
 

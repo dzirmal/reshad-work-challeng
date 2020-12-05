@@ -1,30 +1,41 @@
-import React, { useEffect, useState } from 'react'
-import axios from '../../axios'
-
-import requests from '../../requests'
-
+import React, { useContext, useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import { PlanetsContainer, PlanetsAll, Category } from './Planets.elements'
 import { PlanetCard } from '..'
-import { useStateValue } from '../../stateProvider/StateProvider'
+import { getPlanets } from '../../helpers/actions/getPlanets'
+import { GlobalProvider } from '../../helpers/Provider'
 
 // const { GraphQLServer } = require('graphql-yoga')
+// import axios from '../../helpers/axios/axios'
+// import requests from '../../helpers/requests'
 
-function Planets() {
-  // const [{ movies, dispatch }] = useStateValue()
+const Planets = () => {
+  const planetsDispatch = useContext(GlobalProvider)
+  const planetsState = useContext(GlobalProvider)
+  const context = useContext(GlobalProvider)
+
+  const history = useHistory()
+
   const [planets, setPlanets] = useState([])
-  const [loading, setLoading] = useState(true)
+  // const [loading, setLoading] = useState(true)
+  // // useEffect(() => {
+  //   async function fetchPlanets() {
+  //     const request = await axios.get(requests.fetchPlanets)
+  //     setPlanets(request.data.results)
+
+  //     return request
+  //   }
+  //   fetchPlanets()
+  // }, [])
+
+  console.log('planetsState:', planetsState)
+  console.log('planetsDispatch:', planetsDispatch)
+  console.log('context:', context)
 
   useEffect(() => {
-    async function fetchPlanets() {
-      const request = await axios.get(requests.fetchPlanets)
-      setPlanets(request.data.results)
-
-      return request
-    }
-    fetchPlanets()
+    // getPlanets(history)(planetsDispatch)
+    getPlanets(history)(planetsDispatch)
   }, [])
-
-  console.log('planets:', planets)
 
   return (
     <PlanetsContainer>

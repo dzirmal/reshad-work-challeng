@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
-import axios from '../../axios'
+import axios from '../../helpers/axios/axios'
 
-import requests from '../../requests'
+import requests from '../../helpers/requests'
 import { FilmCard } from '..'
 import { Category, FilmsAll, FilmsContainer } from './Films.elements'
 

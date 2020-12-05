@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '../../../globalStyle'
+import { Button } from '../../../helpers/globalStyle'
 import {
   GeneralCardContainer,
   CardElement,

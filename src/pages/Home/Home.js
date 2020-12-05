@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Modal, Row } from '../../components'
-import requests from '../../requests'
+import requests from '../../helpers/requests'
 import { HomeContainer, HomeContents, HomeTitle } from './Home.elements'
 
 function Home() {

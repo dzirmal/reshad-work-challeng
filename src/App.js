@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { Films, Navbar, People, Planets, ScrollToTop } from './components'
+import { Films, Navbar, People, Planets } from './components'
+import ScrollToTop from './helpers/ScrollToTop'
 
-import GlobalStyle from './globalStyle'
+import GlobalStyle from './helpers/globalStyle'
 import { Home } from './pages'
 
 function App() {
