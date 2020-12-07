@@ -3,7 +3,7 @@ export default {
   planets: {
     loading: false,
     error: null,
-    planets: [],
+    data: [],
   },
   addPlanet: {
     loading: false,

@@ -3,6 +3,7 @@ export default {
   people: {
     loading: false,
     error: null,
+    data: [],
   },
   addPerson: {
     loading: false,

@@ -1,33 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import axios from '../../helpers/axios/axios'
+import React, { useContext, useEffect } from 'react'
 
-import requests from '../../helpers/requests'
 import { PersonCard } from '..'
 import { Category, PeopleAll, PeopleContainer } from './People.elements'
+import { GlobalContext } from '../../helpers/Provider'
+import { useHistory } from 'react-router-dom'
+import { getPeople } from '../../helpers/actions/actionTypes/getData/getPeople'
 
 function People() {
-  const [people, setPeople] = useState([])
-  const [loading, setLoading] = useState(true)
+  const { peopleState, peopleDispatch } = useContext(GlobalContext)
+  const history = useHistory()
 
   useEffect(() => {
-    async function fetchPlanets() {
-      const request = await axios.get(requests.fetchPeople)
-      setPeople(request.data.results)
-
-      return request
-    }
-    fetchPlanets()
+    getPeople(history)(peopleDispatch)
   }, [])
-
-  console.log('people:', people)
 
   return (
     <PeopleContainer>
       <Category>People</Category>
       <PeopleAll>
-        {people.map((person, i) => (
-          <PersonCard key={i} person={person} />
-        ))}
+        <PersonCard peopleState={peopleState} />
       </PeopleAll>
     </PeopleContainer>
   )

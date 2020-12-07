@@ -22,7 +22,7 @@ const planets = (state, { payload, type }) => {
         planets: {
           ...state.planets,
           loading: false,
-          planets: payload,
+          data: payload,
         },
       }
     }

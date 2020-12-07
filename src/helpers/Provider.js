@@ -1,27 +1,34 @@
-import React, { createContext, children, useReducer } from 'react'
+import React, { createContext, useReducer } from 'react'
 import {
   filmsInitState,
+  homeCardsInitState,
   peopleInitState,
   planetsInitState,
 } from './initialStates'
-import { planets, films, people } from './reducers'
+import { planets, films, people, homeCards } from './reducers'
 
 export const GlobalContext = createContext({})
 
 export const GlobalProvider = ({ children }) => {
-  const [planetsState, dispatchPlanets] = useReducer(planets, planetsInitState)
-  const [filmsState, dispatchFilms] = useReducer(films, filmsInitState)
-  const [peopleState, dispatchPeople] = useReducer(people, peopleInitState)
+  const [planetsState, planetsDispatch] = useReducer(planets, planetsInitState)
+  const [filmsState, filmsDispatch] = useReducer(films, filmsInitState)
+  const [peopleState, peopleDispatch] = useReducer(people, peopleInitState)
+  const [homeCardsState, homeCardsDispatch] = useReducer(
+    homeCards,
+    homeCardsInitState
+  )
 
   return (
     <GlobalContext.Provider
       value={{
         planetsState,
-        dispatchPlanets,
+        planetsDispatch,
         filmsState,
-        dispatchFilms,
+        filmsDispatch,
         peopleState,
-        dispatchPeople,
+        peopleDispatch,
+        homeCardsState,
+        homeCardsDispatch,
       }}>
       {children}
     </GlobalContext.Provider>

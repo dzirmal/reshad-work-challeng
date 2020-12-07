@@ -1,35 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 
-import axios from '../../helpers/axios/axios'
-
-import requests from '../../helpers/requests'
 import { FilmCard } from '..'
 import { Category, FilmsAll, FilmsContainer } from './Films.elements'
+import { GlobalContext } from '../../helpers/Provider'
+import { useHistory } from 'react-router-dom'
+import { getFilms } from '../../helpers/actions/actionTypes/getData/getFilms'
 
 function Films() {
-  // const [{ movies, dispatch }] = useStateValue()
-  const [films, setFilms] = useState([])
-  const [loading, setLoading] = useState(true)
-
+  const { filmsState, filmsDispatch } = useContext(GlobalContext)
+  const history = useHistory()
   useEffect(() => {
-    async function fetchFilms() {
-      const request = await axios.get(requests.fetchFilms)
-      setFilms(request.data.results)
-
-      return request
-    }
-    fetchFilms()
+    getFilms(history)(filmsDispatch)
   }, [])
-
-  console.log('films:', films)
 
   return (
     <FilmsContainer>
       <Category>Films</Category>
       <FilmsAll>
-        {films.map((film) => (
-          <FilmCard key={film.episode_id} film={film} />
-        ))}
+        <FilmCard filmsState={filmsState} />
       </FilmsAll>
     </FilmsContainer>
   )

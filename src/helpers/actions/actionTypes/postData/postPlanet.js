@@ -1,8 +1,8 @@
-import axiosInstance from '../axios/axios'
-import requests from '../requests'
-import { ADD_PLANET, GET_LOADING } from './actionTypes'
+import axiosInstance from '../../../axios/axios'
+import requests from '../../../requests'
+import { GET_LOADING } from '..'
 
-export const getPlanets = ({
+export const postPlanets = ({
   name,
   climate,
   created,

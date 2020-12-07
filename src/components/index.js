@@ -1,4 +1,4 @@
-export { default as GeneralCard } from './Cards/GeneralCard/GeneralCard'
+export { default as HomeCard } from './Cards/HomeCard/HomeCard'
 export { default as PlanetCard } from './Cards/PlanetCard/PlanetCard'
 export { default as FilmCard } from './Cards/FilmCard/FilmCard'
 export { default as PersonCard } from './Cards/PersonCard/PersonCard'
