@@ -51,6 +51,9 @@ export const Button = styled.button`
 export const Links = styled(Link)`
   text-decoration: none;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 export default GlobalStyle

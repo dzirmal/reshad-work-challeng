@@ -1,3 +1,4 @@
+import Message from '../../Messages/Message'
 import {
   CardContainer,
   CardDescription,
@@ -9,7 +10,7 @@ import {
 
 function PlanetsCard({
   planetsState: {
-    planets: { data },
+    planets: { isSearchActive, foundPlanets, error, loading, data },
   },
 
   // planet: {
@@ -27,10 +28,16 @@ function PlanetsCard({
   //   url,
   // },
 }) {
+  const currentPlanets = isSearchActive ? foundPlanets : data
+
   return (
     <>
-      {data.length &&
-        data.map((planet) => (
+      {!loading && currentPlanets.length === 0 && (
+        <Message messageContent='No planets yet.' />
+      )}
+
+      {currentPlanets.length > 0 &&
+        currentPlanets.map((planet) => (
           <CardContainer key={planet.name}>
             <CardHeader>{planet.name}</CardHeader>
             <CardDescription>

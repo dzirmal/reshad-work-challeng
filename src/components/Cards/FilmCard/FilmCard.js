@@ -1,4 +1,5 @@
 import React from 'react'
+import Message from '../../Messages/Message'
 import { CardDescription } from '../PlanetCard/PlanetCard.elements'
 import {
   FilmCardContainer,
@@ -10,7 +11,7 @@ import {
 
 function FilmCard({
   filmsState: {
-    films: { data },
+    films: { data, loading },
   },
   // film: {
   //   characters,
@@ -31,7 +32,11 @@ function FilmCard({
 }) {
   return (
     <>
-      {data.length &&
+      {!loading && data.length === 0 && (
+        <Message messageContent='No films yet.' />
+      )}
+
+      {data.length > 0 &&
         data.map((film) => (
           <FilmCardContainer key={film.title}>
             <FilmCardHeader>{film.title}</FilmCardHeader>

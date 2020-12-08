@@ -28,3 +28,6 @@ export const HOME_CARDS_LOAD_ERROR = 'HOME_CARDS_LOAD_ERROR'
 
 // errors
 export const CONNECTION_ERROR = 'CONNECTION_ERROR'
+
+// search
+export const SEARCH_PLANETS = 'SEARCH_PLANETS'

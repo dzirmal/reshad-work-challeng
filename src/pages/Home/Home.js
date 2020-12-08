@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import { Modal, Row } from '../../components'
+import { Favorites, Modal, Row } from '../../components'
 import { getPlanets } from '../../helpers/actions/actionTypes/getData/getPlanets'
 import { getFilms } from '../../helpers/actions/actionTypes/getData/getFilms'
 import { getPeople } from '../../helpers/actions/actionTypes/getData/getPeople'
@@ -34,6 +34,13 @@ function Home() {
       <HomeContainer>
         <HomeTitle>Welcome to the Star Wars</HomeTitle>
         <HomeContents>
+          {/* <Favorites
+            title='Favorites'
+            planetsState={planetsState}
+            filmsState={filmsState}
+            peopleState={peopleState}
+          /> */}
+
           <Row
             title='Planets'
             fetchUrl={planetsState.planets}

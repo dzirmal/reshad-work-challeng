@@ -33,6 +33,18 @@ export const NavbarRight = styled.div`
   margin: 10px;
 `
 
+export const NavItemDropdown = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00adb5;
+  height: 40px;
+  width: 80px;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+`
+
 export const MobileIcon = styled.div`
   display: none;
 
@@ -79,6 +91,7 @@ export const NavItem = styled.li`
   align-items: center;
   border-bottom: 2px solid transparent;
   margin: 5px;
+  height: 80px;
 
   &:hover {
     border-bottom: 2px solid #0bd5ea;
